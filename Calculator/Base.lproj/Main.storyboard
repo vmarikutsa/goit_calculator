@@ -122,10 +122,6 @@
                                     <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpc-ZJ-J5I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-fh-J0b">
-                                <rect key="frame" x="146" y="173" width="30" height="30"/>
-                                <state key="normal" title="."/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-gc-pNb">
                                 <rect key="frame" x="254" y="59" width="30" height="30"/>
                                 <state key="normal" title="√"/>
@@ -133,16 +129,19 @@
                                     <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzW-av-0Ma"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-3W-yMz">
-                                <rect key="frame" x="254" y="135" width="30" height="30"/>
-                                <state key="normal" title="="/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-DF-FGv">
                                 <rect key="frame" x="254" y="173" width="30" height="30"/>
                                 <state key="normal" title="C"/>
                                 <connections>
                                     <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fB3-aU-XXx"/>
                                     <action selector="touchRefreshResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kEy-I0-580"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-3W-yMz">
+                                <rect key="frame" x="254" y="135" width="30" height="30"/>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApA-HI-dWc"/>
                                 </connections>
                             </button>
                         </subviews>

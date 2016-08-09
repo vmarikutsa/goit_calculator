@@ -61,6 +61,8 @@
     self.didUserStartTyping = NO;
 }
 
+
+/*
 - (IBAction)touchReturn:(id)sender {
     if (self.didUserStartTyping) {
         
@@ -71,6 +73,6 @@
         self.didUserStartTyping = NO;
     }
 }
-
+*/
 
 @end

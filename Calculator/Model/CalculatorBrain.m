@@ -16,11 +16,13 @@
     } else if ([self isEqualToString:@"-"]){
         return CalcOperationDiv;
     } else if ([self isEqualToString:@"×"]){
-        return CalcOperationDiv;
+        return CalcOperationMul;
     } else if ([self isEqualToString:@"÷"]){
         return CalcOperationDiv;
     } else if ([self isEqualToString:@"√"]){
         return CalcOperationSqrt;
+    } else if ([self isEqualToString:@"="]){
+        return CalcOperationNonOperation;
     }
     return CalcOperationNone;
 }
@@ -81,16 +83,32 @@
 }
 
 - (float) executeOperation:(CalcOperation)operation WithDigit:(float) digit {
+    
     float res;
+    
     CalcOperation lastOperation = self.lastOperation;
-    self.lastOperation = operation;
+    
     [self addDigit:digit];
+    
+    
     if (lastOperation == CalcOperationNone) {
-        res = digit;
+        if (operation == CalcOperationSqrt) {
+            res = [self executeOperation: operation];
+            [self addDigit:res];
+        } else {
+            res = digit;
+        };
     } else {
         res = [self executeOperation: lastOperation];
         [self addDigit:res];
     };
+    
+    if (operation == CalcOperationNonOperation || operation == CalcOperationSqrt) {
+        self.lastOperation = CalcOperationNone;
+    } else {
+        self.lastOperation = operation;
+    }
+    
     return res;
 }
 
