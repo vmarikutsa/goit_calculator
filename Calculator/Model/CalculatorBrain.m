@@ -93,13 +93,18 @@
     
     if (lastOperation == CalcOperationNone) {
         if (operation == CalcOperationSqrt) {
-            res = [self executeOperation: operation];
-            [self addDigit:res];
+        //    res = [self executeOperation: operation];
+        //    [self addDigit:res];
         } else {
             res = digit;
         };
     } else {
         res = [self executeOperation: lastOperation];
+        [self addDigit:res];
+    };
+    
+    if (operation == CalcOperationSqrt) {
+        res = [self executeOperation: operation];
         [self addDigit:res];
     };
     
